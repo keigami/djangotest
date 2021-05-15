@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block main %}
+<p>hoge@about</p>
+
+<h1>
+    <p>
+        これまでに{{ num_services|intcomma }}個のサービスを作りました。
+    </p>
+</h1>
+
+<ui>
+    {% for skill in skills %}
+    <li>{{ skill }}</li>
+    {% empty %}
+    <p>no skill</p>
+    {% endfor%}
+</ui>
+
+{% endblock %}

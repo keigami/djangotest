@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block main %}
+<p>hoge@index</p>
+
+{% if username == "Keigami" %}
+<h1>Keigamiさんようこそ!!</h1>
+
+{% elif username %}
+<h1>{{ username }} さん !!!!!!!!!!!!!!!!!</h1>
+
+{% else %}
+<p>no name</p>
+
+{% endif %}
+
+{% now "Y-m-d h-i"%}
+<img src="{% static 'keigami.png' %}">
+{% endblock %}
